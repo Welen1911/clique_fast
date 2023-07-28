@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-import { Button } from "./Button"
+import { Button, Link } from "./Button"
 
 export const Modality = () => {
   const [liberar, setLiberar] = useState("Selecione")
@@ -47,7 +47,7 @@ export const Modality = () => {
             
           </div>
           <br></br>
-          <Button children={liberar}></Button>
+          <Link children={liberar}></Link>
         
         </div>
    ) 
