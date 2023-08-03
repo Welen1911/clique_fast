@@ -1,7 +1,18 @@
-export const Button = ({children}) => {
-    return (
-        <button className="btn btn-dark mb-3 mt-3">{children}</button>
-    )
+export const Button = ({children, onClick}) => {
+    if (children === 0) {
+        return (
+            <button className="btn btn-dark mb-3 mt-3" onClick={onClick}
+                disabled={true}
+            >{children}</button>
+        )    
+    } else {
+        return (
+            <button className="btn btn-dark mb-3 mt-3" onClick={onClick}
+                
+            >{children}</button>
+        )
+    }
+    
 }
 
 export const Link = ({children}) => {
