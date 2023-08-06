@@ -14,8 +14,13 @@ export const Crono = () => {
     console.log("Erro ao converter para inteiro!")
   }
   const [decre, setDecre] = useState(modaDecre)
-  
+  const [stop, setStop] = useState(false)
+
   const handleClick = () => {
+    if (decre == 1) {
+      setStop(true)
+      console.log(stop)
+    }
     setDecre(decre-1)
   } 
   
@@ -23,7 +28,7 @@ export const Crono = () => {
   return (
         <>
         <div className="container">
-          <div><Cronometro></Cronometro></div>
+          <div><Cronometro stop={stop}></Cronometro></div>
           <Button className="btn btn-dark mb-3 mt-3" onClick={() => handleClick()} id="button">{decre}</Button>
         </div>
         </>
